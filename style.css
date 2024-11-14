@@ -21,6 +21,16 @@
     cursor: pointer;
 }
 
+.section-title{
+    font-size: 2.2rem;
+    color: #131313;
+    font-weight: 700;
+}
+.section-description{
+    color: #424242;
+    margin: 20px 0px;
+}
+
 
 /* Header all styles  */
 header{
@@ -78,6 +88,7 @@ a{
 main{
     max-width: 1440px;
     margin: 0 auto;
+    background-color: #ffffff;
 }
 
 /* Teams styles  */
@@ -117,6 +128,68 @@ main{
     width: 100%;
 }
 
+
+/* Facts Section styles  */
+
+.facts-section{
+    margin: 20px 150px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.card{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border: 1px solid #FF900E;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 15px;
+}
+.number{
+    color: rgb(71, 68, 68);
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+
+
+/* Sponsors section  */
+.sponsor{
+    margin: 20px 150px;
+}
+.sponsor-top{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.sponsor-companys{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.sponsor-companys img{
+    width: 100px;
+    opacity: 60%;
+}
+
+
+/* Footer styles */
+.footer-section{
+    text-align: center;
+    margin-top: 100px;
+    margin: 20px 150px;
+    background-color: #fff4e7;
+    height: 50px;
+    padding-top: 5px;
+    border-radius: 10px;
+}
 /* Responsive Media Query  */
 
 @media screen and (max-width: 576px){
@@ -130,11 +203,12 @@ main{
     nav ul{
         margin-top: 20px;
     }
-    .teams-img-container{
-        grid-template-columns: 1fr;
+    .teams-img-container, .cards , .sponsor-companys{
+        grid-template-columns: repeat(2,1fr);
     }
-    .teams-content{
-        padding: 10px;
+    .teams-content ,
+    .facts-section , .sponsor{
+        margin: 10px;
     }
     .banner-img{
         width: 100%;
@@ -145,10 +219,14 @@ main{
     nav,.teams-container{
         flex-direction: column;
     }
-    header{
+    header,.teams-container,.facts-section,.sponsor,.footer-section{
         padding: 50px;
+        margin: 10px 50px;
     }
     nav ul{
         margin-top: 30px;
+    }
+    .cards,.sponsor-companys{
+        grid-template-columns: repeat(2,1fr);
     }
 }
